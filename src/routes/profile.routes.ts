@@ -1,9 +1,9 @@
 import { FastifyInstance } from "fastify";
 import { z } from "zod";
 import axios from "axios";
-import { prisma } from "../db";
-import { requireAuth, requireRole } from "../middleware/auth";
-import { errorResponseSchema, messageResponseSchema } from "../schemas/profile.schemas";
+import { prisma } from "../db.js";
+import { requireAuth, requireRole } from "../middleware/auth.js";
+import { errorResponseSchema, messageResponseSchema } from "../schemas/profile.schemas.js";
 
 // Badge award post creation function
 async function createBadgeAwardPost(badge: any, awardedBy: any, studentInfo: any) {

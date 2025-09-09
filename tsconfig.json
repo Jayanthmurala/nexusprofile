@@ -7,9 +7,15 @@
     "rootDir": "src",
     "strict": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "types": ["node"]
+    "types": ["node"],
+    "declaration": true,
+    "sourceMap": true
   },
-  "include": ["src", "prisma"]
+  "include": ["src", "prisma"],
+  "ts-node": {
+    "esm": true
+  }
 }

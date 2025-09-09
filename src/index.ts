@@ -3,8 +3,8 @@ import cors from "@fastify/cors";
 import swagger from "@fastify/swagger";
 import swaggerUI from "@fastify/swagger-ui";
 import { ZodTypeProvider, serializerCompiler, validatorCompiler, jsonSchemaTransform } from "fastify-type-provider-zod";
-import { env } from "./config/env";
-import profileRoutes from "./routes/profile.routes";
+import { env } from "./config/env.js";
+import profileRoutes from "./routes/profile.routes.js";
 
 async function buildServer() {
   const app = Fastify({ logger: true }).withTypeProvider<ZodTypeProvider>();
